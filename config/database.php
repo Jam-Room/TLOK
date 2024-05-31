@@ -17,6 +17,7 @@ if (!defined('DB_PORT')) {
     define('DB_PORT', (int) getenv('DB_PORT'));
 }
 
+
 // Crear una nueva conexión a la base de datos
 $db = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, DB_PORT);
 
