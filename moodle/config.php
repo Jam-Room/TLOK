@@ -4,12 +4,12 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = 'mysqli';
-$CFG->dblibrary = 'native';
-$CFG->dbhost    = 'localhost';
-$CFG->dbname    = 'moodle';
-$CFG->dbuser    = 'root';
-$CFG->dbpass    = '';
+$CFG->dbtype    = getenv('DB_TYPE') ?: 'mysqli';
+$CFG->dblibrary = getenv('DB_LIBRARY') ?: 'native';
+$CFG->dbhost    = getenv('DB_HOST') ?: 'localhost';
+$CFG->dbname    = getenv('DB_NAME') ?: 'moodle';
+$CFG->dbuser    = getenv('DB_USER') ?: 'root';
+$CFG->dbpass    = getenv('DB_PASS') ?: '';  // Si tu base de datos requiere una contraseña
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
@@ -19,7 +19,7 @@ $CFG->dboptions = array (
 );
 
 $CFG->wwwroot   = 'http://localhost/proyect_lok/moodle';
-$CFG->dataroot  = 'C:\\wamp64\\www\\proyect_lok\\moodledata';
+$CFG->dataroot  = '/home/Jam-Room/TLOK/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
