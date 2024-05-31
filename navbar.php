@@ -1,5 +1,10 @@
 <?php
 
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+
 $loggedin = false;
 
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
