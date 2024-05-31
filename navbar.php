@@ -1,8 +1,5 @@
 <?php
 
-if (session_status() === PHP_SESSION_NONE) {
-  session_start();
-}
 
 
 $loggedin = false;
@@ -11,7 +8,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
   $loggedin = true;
 
   // Aquí debes realizar la conexión a la base de datos y preparar la consulta
-  $db = new mysqli("DB_HOST", "DB_USERNAME", "DB_PASSWORD", "DB_NAME", "DB_PORT");
+  $db = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, DB_PORT);
 
   // Verifica si la conexión a la base de datos fue exitosa
   if ($db->connect_errno) {
