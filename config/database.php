@@ -1,19 +1,19 @@
 <?php
 
 if (!defined('DB_HOST')) {
-    define('DB_HOST', getenv('DB_HOST'));
+    define('DB_HOST', $_ENV['DB_HOST']);
 }
 if (!defined('DB_USERNAME')) {
-    define('DB_USERNAME', getenv('DB_USERNAME'));
+    define('DB_USERNAME', $_ENV['DB_USERNAME']);
 }
 if (!defined('DB_PASSWORD')) {
-    define('DB_PASSWORD', getenv('DB_PASSWORD'));
+    define('DB_PASSWORD', $_ENV['DB_PASSWORD']);
 }
 if (!defined('DB_NAME')) {
-    define('DB_NAME', getenv('DB_NAME'));
+    define('DB_NAME', $_ENV['DB_NAME']);
 }
 if (!defined('DB_PORT')) {
-    define('DB_PORT', getenv('DB_PORT'));
+    define('DB_PORT', $_ENV['DB_PORT']);
 }
 
 
