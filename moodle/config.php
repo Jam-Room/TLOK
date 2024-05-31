@@ -18,7 +18,7 @@ $CFG->dboptions = array (
 );
 
 $CFG->wwwroot   = 'http://tlok-production.up.railway.app/moodle';
-$CFG->dataroot  = '/home/Jam-Room/TLOK/moodledata';
+$CFG->dataroot  = __DIR__ . '/moodledata';
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
