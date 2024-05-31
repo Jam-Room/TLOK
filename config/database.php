@@ -14,7 +14,7 @@ if (!defined('DB_NAME')) {
     define('DB_NAME', $_ENV['DB_NAME']);
 }
 if (!defined('DB_PORT')) {
-    define('DB_PORT', $_ENV['DB_PORT']);
+    define('DB_PORT', (int) $_ENV['DB_PORT']);
 }
 
 
