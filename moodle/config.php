@@ -4,12 +4,11 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('DB_TYPE') ?: 'mysqli';
-$CFG->dblibrary = getenv('DB_LIBRARY') ?: 'native';
-$CFG->dbhost    = getenv('DB_HOST') ?: 'localhost';
-$CFG->dbname    = getenv('DB_NAME') ?: 'moodle';
-$CFG->dbuser    = getenv('DB_USER') ?: 'root';
-$CFG->dbpass    = getenv('DB_PASS') ?: '';  // Si tu base de datos requiere una contraseña
+$CFG->dbtype    = 'mysqli';
+$CFG->dblibrary = 'native';
+$CFG->dbhost    = 'localhost';
+$CFG->dbname    = 'moodle';
+$CFG->dbuser    = 'root';
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
@@ -18,7 +17,7 @@ $CFG->dboptions = array (
   'dbcollation' => 'utf8mb4_unicode_ci',
 );
 
-$CFG->wwwroot   = 'http://localhost/proyect_lok/moodle';
+$CFG->wwwroot   = 'http://tlok-production.up.railway.app/moodle';
 $CFG->dataroot  = '/home/Jam-Room/TLOK/moodledata';
 $CFG->admin     = 'admin';
 
