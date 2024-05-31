@@ -18,7 +18,7 @@ if (!defined('DB_PORT')) {
 }
 
 
-$db = new mysqli("DB_HOST", "DB_USERNAME", "DB_PASSWORD", "DB_NAME", "DB_PORT");
+$db = mysqli_connect("DB_HOST", "DB_USERNAME", "DB_PASSWORD", "DB_NAME", "DB_PORT");
 
 if ($db->connect_errno) {
     die("Error de conexión a la base de datos: (" . $db->connect_error . ")");
