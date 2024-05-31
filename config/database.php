@@ -1,19 +1,19 @@
 <?php
 
 if (!defined('DB_HOST')) {
-    define('DB_HOST', 'localhost');
+    define('DB_HOST', getenv('DB_HOST'));
 }
 if (!defined('DB_USERNAME')) {
-    define('DB_USERNAME', 'root');
+    define('DB_USERNAME', getenv('DB_USERNAME'));
 }
 if (!defined('DB_PASSWORD')) {
-    define('DB_PASSWORD', '');
+    define('DB_PASSWORD', getenv('DB_PASSWORD'));
 }
 if (!defined('DB_NAME')) {
-    define('DB_NAME', 'proyect_lok');
+    define('DB_NAME', getenv('DB_NAME'));
 }
 if (!defined('DB_PORT')) {
-    define('DB_PORT', 3306);
+    define('DB_PORT', getenv('DB_PORT'));
 }
 
 
