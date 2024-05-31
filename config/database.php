@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 if (!defined('DB_HOST')) {
     define('DB_HOST', getenv('DB_HOST'));
